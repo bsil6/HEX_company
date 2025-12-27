@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEX | Premium Gym Wear</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Montserrat', Arial, sans-serif;
+  .insta-btn{
+  padding:10px 26px;
+  border:1px solid #ffffff;
+  border-radius:25px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:900;
+  letter-spacing:1px;
+  transition:0.35s ease;
+  background:transparent;
+}
+
+.insta-btn:hover{
+  background:#ffffff;
+  color:#000000;
+  transform:translateY(-2px);
+}
+
+}
+.logo{
+  font-size:24px;
+  font-weight:900;
+}
+
+nav a{
+  font-weight:700;
+}
+
+.hero h1{
+  font-weight:900;
+  letter-spacing:4px;
+}
+
+.hero p{
+  font-weight:600;
+}
+
+.section h2{
+  font-weight:700;
+}
+
+.btn{
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+
+:root{
+  --black:#000;
+  --white:#fff;
+  --gray:#999;
+}
+
+body{
+  background:var(--black);
+  color:var(--white);
+  overflow-x:hidden;
+}
+
+/* NAV */
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:25px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#000d;
+  backdrop-filter:blur(6px);
+  z-index:50;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:bold;
+  letter-spacing:3px;
+}
+
+nav a{
+  margin-left:30px;
+  text-decoration:none;
+  color:#aaa;
+  transition:.3s;
+}
+nav a:hover{
+  color:#fff;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:0 10%;
+}
+
+.hero h1{
+  font-size:60px;
+  letter-spacing:3px;
+  margin-bottom:10px;
+  opacity:0;
+  transform:translateY(40px);
+  animation:show .9s forwards;
+}
+
+.hero p{
+  color:#bbb;
+  margin-bottom:25px;
+  font-size:18px;
+  opacity:0;
+  transform:translateY(40px);
+  animation:show .9s .2s forwards;
+}
+
+.btn{
+  padding:12px 30px;
+  border:1px solid #fff;
+  text-decoration:none;
+  color:#fff;
+  transition:.3s;
+  opacity:0;
+  animation:show .9s .4s forwards;
+}
+.btn:hover{
+  background:#fff;
+  color:#000;
+}
+
+/* ANIMATION */
+@keyframes show{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* SECTIONS */
+.section{
+  padding:100px 10%;
+  text-align:center;
+}
+
+.section h2{
+  font-size:35px;
+  letter-spacing:2px;
+  margin-bottom:10px;
+}
+
+.section p{
+  color:#aaa;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+  margin-top:50px;
+}
+
+.card{
+  background:#0d0d0d;
+  border:1px solid #121212;
+  padding:25px;
+  transition:.3s;
+  transform:translateY(40px);
+  opacity:0;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.01);
+  border:1px solid #333;
+}
+
+footer{
+  text-align:center;
+  padding:40px;
+  border-top:1px solid #202020;
+  color:#777;
+}
+
+/* scroll animation */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s;
+}
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">HEX</div>
+  <nav>
+    <a href="#">الرئيسية</a>
+    <a href="#services">HEX</a>
+    <a href="#shop">المتجر</a>
+    <a href="https://instagram.com/hex" target="_blank" class="insta-btn">Instagram</a>
+  </nav> 
+
+
+</header>
+
+<section class="hero">
+  <div>
+    <h1>BUILT FOR GRIND</h1>
+    <p>ملابس رياضية قوية – تصميم نظيف – أداء عالي</p>
+    <a href="#shop" class="btn">تسوق الآن</a>
+  </div>
+</section>
+
+<section id="services" class="section reveal">
+  <h2>ليش تختار HEX؟</h2>
+  <p>قوة، راحة، وستايل يناسب التمرين والحياة اليومية.</p>
+
+  <div class="grid">
+    <div class="card">🔥 جودة عالية وخامات ممتازة</div>
+    <div class="card">💪 تصميم مريح ومناسب للتمرين</div>
+    <div class="card">🚚 توصيل سريع وتجربة احترافية</div>
+  </div>
+</section>
+
+<section id="shop" class="section reveal">
+  <h2>منتجات HEX</h2>
+  <p>مجموعة مصممة لعشاق الحديد</p>
+
+  <div class="grid">
+    <div class="card">Performance Tee</div>
+    <div class="card">Training Hoodie</div>
+    <div class="card">Athlete Pants</div>
+  </div>
+</section>
+
+<footer>
+  © 2025 HEX — All Rights Reserved
+</footer>
+
+<script>
+window.addEventListener("scroll",()=>{
+  document.querySelectorAll(".reveal").forEach(sec=>{
+    let top = sec.getBoundingClientRect().top;
+    if(top < window.innerHeight - 120){
+      sec.classList.add("active");
+      sec.querySelectorAll(".card").forEach((c,i)=>{
+        setTimeout(()=>{c.style.opacity="1";c.style.transform="translateY(0)"},i*150);
+      });
+    }
+  })
+});
+</script>
+
+</body>
+</html>
